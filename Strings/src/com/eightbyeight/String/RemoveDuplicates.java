@@ -40,7 +40,7 @@ public class RemoveDuplicates {
 	}
 	
 	
-	// Using 
+	// Using ascii values
 	public String removeDup2(String s)
 	{
 		
@@ -53,6 +53,7 @@ public class RemoveDuplicates {
 		
 		for(int i=0;i<s.length();i++)
 		{
+			// if the character is not a duplicate then array[ascii] entry is set to false
 			if(!array[(int)s.charAt(i)])
 			{
 				array[(int)s.charAt(i)]=true;
