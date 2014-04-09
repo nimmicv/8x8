@@ -49,6 +49,13 @@ public class RemoveDuplicates {
 			return null;
 		}
 		boolean[] array = new boolean[128];
+		
+		//Set the entire array to false
+		for(int i=0;i<array.length;i++)
+		{
+			array[i]=false;
+		}
+		
 		StringBuffer sb = new StringBuffer();
 		
 		for(int i=0;i<s.length();i++)
@@ -56,6 +63,7 @@ public class RemoveDuplicates {
 			// if the character is not a duplicate then array[ascii] entry is set to false
 			if(!array[(int)s.charAt(i)])
 			{
+				//Character found and hence setting array[ascii] to true
 				array[(int)s.charAt(i)]=true;
 				sb.append(s.charAt(i));
 			}
